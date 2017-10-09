@@ -17,7 +17,6 @@ def call() {
                     echo "The version for this file is "
                 else 
                      echo "Version does not exist"
-                     exit 1
                 fi
               '''
     }        
