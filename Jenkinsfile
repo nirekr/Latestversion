@@ -15,7 +15,7 @@ pipeline {
         timestamps()
     }
     stages {
-        stage('Latest Version') {
+        stage('Version check') {
             steps {
                 Getversion()
               
