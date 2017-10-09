@@ -14,9 +14,9 @@ def call() {
                  if [[ ! -f pom.xml ]]; then
                     echo "pom file does not exist"
                   elif grep 'version' pom.xml; then
-                    echo "The version for this file is "
+                    awk '/<license>/ { print }' pom.xml
                 else 
-                     echo "Version does not exist"
+                     echo "license does not exist"
                 fi
               '''
     }        
