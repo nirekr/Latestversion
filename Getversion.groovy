@@ -8,7 +8,7 @@ def call() {
     println(publicRepos)
     
     for (repo in publicRepos) {
-        checkout([$class: 'GitSCM', branches: [[name: '*/stable-atterberg']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: "${repo}"]], gitTool: 'linux-git', submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/dellemc-symphony/${repo}"]]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/stable/atterberg']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: "${repo}"]], gitTool: 'linux-git', submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/dellemc-symphony/${repo}"]]])
         dir("$repo"){
             sh '''
                  if [[ ! -f pom.xml ]]; then
