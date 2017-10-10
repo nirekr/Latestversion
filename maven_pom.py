@@ -16,7 +16,7 @@ if __name__ == "__main__":
     p = tree.getroot().find("{%s}parent" % ns)
 
     if p is not None:
-      if p.find("{%s}groupId" % ns) is not com.dell.cpsd :
+      if p.find("{%s}groupId" % ns) is  com.dell.cpsd :
         group = p.find("{%s}groupId" % ns).text
 
       if p.find("{%s}version" % ns) is not None:
