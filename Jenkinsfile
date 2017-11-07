@@ -15,9 +15,9 @@ pipeline {
         timestamps()
     }
     stages {
-        stage('Version check') {
+        stage('Stable Branch') {
             steps {
-                Getversion()
+                checkstablebranch()
               
             }
         }
